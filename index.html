@@ -59,6 +59,24 @@
                 <td>$17.0</td>
             </tr>
         </table>
+        <hr>
+        <h3>Algebra Algorithm</h3>
+        <blockquote>Assume you're given a set of functions such that each two can intersect at most once. Let's keep in each vertex of a segment tree some function in such way, that if we go from root to the leaf it will be guaranteed that one of the functions we met on the path will be the one giving the minimum value in that leaf. Let's see how to construct it.</blockquote>
+        <a href="https://cp-algorithms.com/geometry/convex_hull_trick.html">Here is the source link</a>
+        <pre>
+            typedef long long ftype;
+typedef complex<ftype> point;
+#define x real
+#define y imag
+
+ftype dot(point a, point b) {
+    return (conj(a) * b).x();
+}
+
+ftype f(point a,  ftype x) {
+    return dot(a, {x, 1});
+}
+        </pre>
         
     </body>
 </html>
